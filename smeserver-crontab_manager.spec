@@ -1,15 +1,15 @@
 Summary: sme server crontab maanger
 %define name smeserver-crontab_manager
 Name: %{name}
-%define version 2.2
-%define release 2%{dist}
+%define version 2.4
+%define release 1%{dist}
 Version: %{version}
 Release: %{release}
 License:   GPL
 Group: Service
-Source: %{name}-%{version}.tgz
-Patch0: smeserver-crontab_manager-2.2-patch0.patch
-Patch1:smeserver-crontab_manager-2.2-locale-2013-07-14.patch 
+Source: %{name}-%{version}.tar.gz
+#Patch0: smeserver-crontab_manager-2.2-patch0.patch
+#Patch1:smeserver-crontab_manager-2.2-locale-2013-07-14.patch 
 #Patch1: %{name}-%{version}.patch.yyyymmddnn
 Packager: Ap.Muthu <apmuthu@usa.net>
 BuildRoot: /var/tmp/e-smith-buildroot
@@ -19,6 +19,9 @@ Requires: e-smith-base, e-smith-lib, e-smith >= 4.1
 AutoReqProv: no
 
 %changelog
+* Wed Jun 24 2014 stephane de Labrusse <stephdl@de-labrusse.fr> - 2.4-1
+- Initial release to sme9
+
 * Sun Jul 14 2013 JP Pialasse <tests@pialasse.com> 2.2-2.sme
 - apply locale 2013-07-14 patch
 
@@ -56,8 +59,8 @@ sme server administration panel to control crontab
 
 %prep
 %setup
-%patch0 -p1
-%patch1 -p1
+#%patch0 -p1
+#%patch1 -p1
 
 %build
 perl createlinks
