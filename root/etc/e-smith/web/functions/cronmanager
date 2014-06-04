@@ -1,0 +1,259 @@
+#!/usr/bin/perl -wT
+# vim: ft=xml ts=8 sw=4 noet:
+#----------------------------------------------------------------------
+# heading     : Configuration
+# description : Crontab Manager
+# navigation  : 6000 6810
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+# copyright (C) 2004 Schirrm's Studio
+# copyright (C) 2002 Mitel Networks Corporation
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
+#----------------------------------------------------------------------
+
+use strict;
+use esmith::FormMagick::Panel::cronmanager;
+my $form = esmith::FormMagick::Panel::cronmanager->new();
+# Uncomment the next line for debugging purposes.
+# $form->debug(1);
+$form->display();
+
+
+__DATA__
+<form
+    title="FORM_TITLE"
+    header="/etc/e-smith/web/common/head.tmpl"
+    footer="/etc/e-smith/web/common/foot.tmpl">
+
+    <!-- page 0 -->
+    <page
+        name="First"
+        pre-event="print_status_message()"
+        post-event="main()">
+        <description>FIRST_PAGE_DESCRIPTION</description>
+	<subroutine src="display_button('ADD')" />
+        <subroutine src="display_cron_entry()" />
+    </page>
+    <page
+        name="change_entry" pre-event="turn_off_buttons()" post-event="main()"
+        >
+        <description>MOD_CRON_ENTRY</description>
+        <field type="select" id="min" value="give_numeric(0)" 
+	    options="
+			'EVERY_MINUTE_TEXT',
+			'0',
+			'1',
+			'2',
+			'3',
+			'4',
+			'5',
+			'6',
+			'7',
+			'8',
+			'9',
+			'10',
+			'11',
+			'12',
+			'13',
+			'14',
+			'15',
+			'16',
+			'17',
+			'18',
+			'19',
+			'20',
+			'21',
+			'22',
+			'23',
+			'24',
+			'25',
+			'26',
+			'27',
+			'28',
+			'29',
+			'30',
+			'31',
+			'32',
+			'33',
+			'34',
+			'35',
+			'36',
+			'37',
+			'38',
+			'39',
+			'40',
+			'41',
+			'42',
+			'43',
+			'44',
+			'45',
+			'46',
+			'47',
+			'48',
+			'49',
+			'50',
+			'51',
+			'52',
+			'53',
+			'54',
+			'55',
+			'56',
+			'57',
+			'58',
+			'59'
+	    ">
+            <label>MINUTE_LABEL</label>
+        </field>
+	<field type="select" id="every_min" value="give_bool(1)"
+		options="
+			'YES',
+			'NO'
+			">
+		<label>EVERY_MINUTE_LABEL</label>
+	</field>
+        <field type="select" id="hour" value="give_numeric(2)" 
+            options="
+                'EVERY_HOUR_TEXT',
+		'0',
+                '1',
+                '2',
+                '3',
+                '4',
+                '5',
+                '6',
+                '7', 
+                '8', 
+                '9', 
+                '10',
+                '11',
+                '12',
+                '13',
+                '14',
+                '15',
+                '16',
+                '17',
+                '18',
+                '19',
+                '20',
+                '21',
+                '22',
+                '23',
+            ">
+            <label>HOUR_LABEL</label>
+        </field>
+        <field type="select" id="every_hour" value="give_bool(3)"
+                options="
+                        'YES',
+                        'NO'
+                        ">
+                <label>EVERY_HOUR_LABEL</label>
+        </field>
+        <field type="select" 
+            id="day" 
+            value="give_numeric(4)" 
+            options="
+	        'EVERY_DAY_TEXT',
+        	'1',
+	        '2',
+        	'3',
+	        '4',
+        	'5',
+	        '6',
+        	'7',
+	        '8',
+        	'9',
+	        '10',
+        	'11',
+	        '12',
+        	'13',
+	        '14',
+        	'15',
+	        '16',
+        	'17',
+	        '18',
+        	'19',
+	        '20',
+        	'21',
+	        '22',
+        	'23',
+	        '24',
+        	'25',
+	        '26',
+        	'27',
+	        '28',
+        	'29',
+	        '30',
+        	'31'
+            ">
+            <label>DAY_LABEL</label>
+        </field>
+        <field type="select" id="every_day" value="give_bool(5)"  
+                options="        
+                        'YES',        
+                        'NO'        
+                        ">        
+                <label>EVERY_DAY_LABEL</label>                          
+        </field>        
+        <field type="select" id="month" value="give_month()" 
+            options="
+	        'EVERY_MONTH_TEXT',
+        	'JANUARY',
+	        'FEBRUARY',
+        	'MARCH',
+	        'APRIL',
+        	'MAY',
+	        'JUNE',
+        	'JULY',
+	        'AUGUST',
+        	'SEPTEMBER',
+	        'OCTOBER',
+        	'NOVEMBER',
+	        'DECEMBER'
+            ">
+            <label>MONTH_LABEL</label>
+        </field>
+        <field type="select" id="day_week" value="give_dayweek()" 
+            options="
+	        'EVERY_DAY_OF_WEEK',
+	        'MONDAY',
+	        'TUESDAY',
+        	'WEDNESDAY',
+	        'THURSDAY',
+        	'FRIDAY',
+	        'SATERDAY',
+        	'SUNDAY'
+            ">
+            <label>DAYWEEK_LABEL</label>
+        </field>
+        <field type="select" id="user" value="give_numeric(8)"
+            options="give_all_user()"
+            >
+            <label>USER_RUN_CRON</label>
+        </field>
+        <field type="text" id="command" value="give_numeric(9)" size="50" validation="nonblank">
+            <label>COMMAND_LABEL</label>
+        </field>
+        <subroutine src="change_cron_entry()" />   
+        <subroutine src="print_button('SAVE')" />
+    </page>
+    <page
+        name="delete_entry" pre-event="turn_off_buttons()"
+        post-event="main()">
+        <description>DELETE_CRON_ENTRY</description>
+	<subroutine src="delete_cron_entry()" />
+        <subroutine src="print_button('REMOVE')" />
+    </page>
+</form>

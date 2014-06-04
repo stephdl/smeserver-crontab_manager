@@ -1,0 +1,234 @@
+<lexicon lang="pt-br">
+    <entry>
+        <base>FORM_TITLE</base>
+        <trans>Gerenciador do Crontab</trans>
+    </entry>
+    <entry>
+        <base>FIRST_PAGE_DESCRIPTION</base>
+            <trans><![CDATA[ <p> Este painel permite facilmente adicionar, modificar ou apagar tarefas no crontab</p> ]]></trans>
+    </entry>
+    <entry>
+	<base>ADD</base>
+	<trans>Adicionar uma nova crontab</trans>
+    </entry>
+    <entry>
+        <base>BUTTON_LABEL_DISPLAY</base>
+        <trans>Novo Display</trans>
+    </entry>
+    <entry>
+        <base>ALL</base>
+        <trans>Todos registros</trans>
+    </entry>
+    <entry>
+        <base>USERS</base>
+        <trans>registros dos usuários</trans>
+    </entry>
+    <entry>
+        <base>MINUTE</base>
+        <trans>Minutos</trans>
+    </entry>
+    <entry>
+	<base>EVERY_MINUTE</base>
+	<trans>Cada minuto</trans>
+    </entry>
+    <entry>
+        <base>HOURS</base>
+        <trans>Horas</trans>
+    </entry>
+    <entry>
+        <base>EVERY_HOURS</base>
+        <trans>Cada hora</trans>
+    </entry>
+    <entry>
+        <base>DAY</base>
+        <trans>Dia</trans>
+    </entry>
+    <entry>
+        <base>EVERY_DAY</base>
+        <trans>Cada dia</trans>
+    </entry>
+    <entry>
+        <base>MONTH</base>
+        <trans>Mes</trans>
+    </entry>
+    <entry>
+        <base>DAY_WEEK</base>
+        <trans>Dia da semana</trans>
+    </entry>
+    <entry>
+	<base>USER_RUN_CRON</base>
+      	<trans>Usuário</trans>
+    </entry>
+    <entry>
+        <base>COMMAND</base>
+        <trans>Comando</trans>
+    </entry>
+    <entry>
+	<base>EVERY_MINUTE_TEXT</base>
+	<trans>Cada minuto</trans>
+    </entry>
+    <entry>
+        <base>EVERY_HOUR_TEXT</base>
+        <trans>Cada hora</trans>
+    </entry>
+    <entry>
+        <base>EVERY_DAY_TEXT</base>
+        <trans>Cada dia</trans>
+    </entry>
+    <entry>
+        <base>EVERY_MONTH_TEXT</base>
+        <trans>Cada mês</trans>
+    </entry>
+    <entry>
+        <base>EVERY_DAY_OF_WEEK</base>
+        <trans>Cada dia da semana</trans>
+    </entry>
+    <entry>
+        <base>MONDAY</base>
+        <trans>Segunda</trans>
+    </entry>
+    <entry>
+        <base>TUESDAY</base>
+        <trans>Terça</trans>
+    </entry>
+    <entry>
+        <base>WEDNESDAY</base>
+        <trans>Quarta</trans>
+    </entry>
+    <entry>
+        <base>THURSDAY</base>                 
+        <trans>Quinta</trans>            
+    </entry>
+    <entry>
+        <base>FRIDAY</base>                 
+        <trans>Sexta</trans>            
+    </entry>
+    <entry>
+        <base>SATERDAY</base>                 
+        <trans>Sábado</trans>            
+    </entry>
+    <entry>
+        <base>SUNDAY</base>                 
+        <trans>Domingo</trans>            
+    </entry>
+    <entry> 
+        <base>JANUARY</base>
+        <trans>Janeiro</trans>
+    </entry>
+    <entry> 
+        <base>FEBRUARY</base>
+        <trans>Fevereiro</trans>
+    </entry>
+    <entry> 
+        <base>MARCH</base>
+        <trans>Março</trans>
+    </entry>
+    <entry> 
+        <base>APRIL</base>
+        <trans>Abril</trans>
+    </entry>
+    <entry> 
+        <base>MAY</base>
+        <trans>Maio</trans>
+    </entry>
+    <entry> 
+        <base>JUNE</base>
+        <trans>Junho</trans>
+    </entry>
+    <entry> 
+        <base>JULY</base>
+        <trans>Julho</trans>
+    </entry>
+    <entry> 
+        <base>AUGUST</base>
+        <trans>Agosto</trans>
+    </entry>
+    <entry> 
+        <base>SEPTEMBER</base>
+        <trans>Setembro</trans>
+    </entry>
+    <entry> 
+        <base>OCTOBER</base>
+        <trans>Outubro</trans>
+    </entry>
+    <entry> 
+        <base>NOVEMBER</base>
+        <trans>Novembro</trans>
+    </entry>
+    <entry> 
+        <base>DECEMBER</base>
+        <trans>Dezembro</trans>
+    </entry>
+    <entry>
+	<base>CHANGE</base>
+	<trans>Alterar</trans>
+    </entry>
+    <entry>
+	<base>DELETE</base>
+	<trans>Excluir</trans>
+    </entry>
+    <entry>
+        <base>MINUTE_LABEL</base>
+        <trans><![CDATA[ minutos:<br> '0' é o primeiro minuto, ex 2.00 em vez de '1' sendo 2.01<br> AVISO: você PRECISA escolher um minuto aqui ou o cron irá rodar A CADA MINUTO! ]]></trans>
+    </entry>
+    <entry>
+	<base>EVERY_MINUTE_LABEL</base>
+	<trans>Escolher cada minuto</trans>
+    </entry>
+    <entry>
+	<base>HOUR_LABEL</base>
+	<trans><![CDATA[ horas:<br> '0' é meia-noite, ou seja 12.00 am . E '1' é 1.00 am '22' siginifica 10pm ]]></trans>
+    </entry>
+    <entry>
+        <base>DAY_LABEL</base>
+        <trans><![CDATA[ dia:<br> Escolha se você quer que o cron roda todos dias, cada N dias ou no n-gesimo dia do mes. Além de escolher um valor aqui,<br> você pode escolher um dia da semana no campo a seguir e ele irá rodar em ambas datas selecionadas. ]]></trans>
+    </entry>
+    <entry>
+        <base>MONTH_LABEL</base>
+        <trans>mês:</trans>
+    </entry>
+    <entry>
+        <base>DAYWEEK_LABEL</base>
+        <trans><![CDATA[ dia da semana:<br> Escolha o dia da semana se você deseja executar o script em certos dias, por exemplo, a cada Segunda. Se você selecionar valores no <br> campo 'dias'  acima, o comando será executado em ambas datas, no N-gesimo dia do mes como escolhido E no(s) dia(s) da semana escolhidos aqui.]]></trans>
+    </entry>
+    <entry>
+	<base>COMMAND_LABEL</base>
+	<trans><![CDATA[ command to be executed:<br> Enter the command which you want to run. This can either be a path to a script, or a 'special' command. If you're not sure of the server path to a file/script, SSH or telnet into your server and navigate to the directory where the file is. Type 'pwd' at the command line, this will tell you the server path to the directory where the script is. Add the file name to the end of this, and that's what you use above.<br> You can enter a command directly instead of having this entry point to a script.<br> <br> examples of entries in this field:<br> /home/myaccount/backup.cgi<br> perl /home/myaccount/backup.cgi<br> php /home/myaccount/clean_database.php<br> /home/myaccount/clean_database.php<br> /home/myaccount/monitor.sh<br> touch /tmp/file.lock<br> cp -Rfpud /home/myaccount /backup/myaccount/ ]]></trans>
+    </entry>
+    <entry>
+        <base>EVERY_HOUR_LABEL</base>
+        <trans>escolher cada hora</trans>
+    </entry>
+    <entry>
+        <base>EVERY_DAY_LABEL</base>
+        <trans>escolher cada dia</trans>
+    </entry>
+    <entry>
+	<base>MOD_CRON_ENTRY</base>
+	<trans>Criar ou Modificar uma entrada crontab</trans>
+    </entry>
+    <entry>
+	<base>SAVE</base>
+	<trans>Salvar</trans>
+    </entry>
+    <entry>
+	<base>SUCCESSFULLY_MODIFY_CRON_ENTRY</base>
+	<trans>Crontab atualizado com sucesso</trans>
+    </entry>
+    <entry>
+	<base>SUCCESSFULLY_CREATE_CRON_ENTRY</base>
+	<trans>Criado nova entrada no crontab com sucesso</trans>
+    </entry>
+    <entry>
+	<base>REMOVE</base>
+	<trans>Excluir</trans>
+    </entry>
+    <entry>
+        <base>DELETE_CRON_ENTRY</base>
+        <trans><![CDATA[ Apagar uma entrada no crontab<br><br><strong>Você está certo de que deseja apagar esta entrada do crontab???</strong> ]]></trans>
+    </entry>
+    <entry>
+	<base>SUCCESSFULLY_DELETE_CRON_ENTRY</base>
+	<trans>Entrada no crontab apagada com sucesso</trans>
+    </entry>
+</lexicon>

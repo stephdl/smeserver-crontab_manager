@@ -1,0 +1,37 @@
+{
+    use esmith::db;
+    use esmith::config;
+
+    my %conf;
+    tie %conf, "esmith::config";
+
+    my $index = 1;
+    my @cron_entry;
+
+    $value=db_get_prop(\%conf, "cronmanager","task$index") || "";
+    while ($value) {
+       @cron_entry=split(/,/, $value);
+
+       if ($cron_entry[0] ne '*') {
+            if ($cron_entry[1] eq 'YES') {
+                $OUT .= "*/";
+            }
+       }
+       $OUT .= $cron_entry[0]." ";
+       if ($cron_entry[2] ne '*') {
+            if ($cron_entry[3] eq 'YES') {
+                $OUT .= "*/";
+            }
+       }
+       $OUT .= $cron_entry[2]." ";
+       if ($cron_entry[4] ne '*') {
+            if ($cron_entry[5] eq 'YES') {
+                $OUT .= "*/";
+            }
+       }
+       $OUT .= $cron_entry[4]." ";
+       $OUT .= $cron_entry[6]." ".$cron_entry[7]." ".$cron_entry[8]." ".$cron_entry[9]."\n";
+       $index++;
+       $value=db_get_prop(\%conf, "cronmanager","task$index") || "";
+    }
+}
